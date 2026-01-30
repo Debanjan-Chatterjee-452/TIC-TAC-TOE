@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tic-Tac-Toe</title>
+  <title>Online Tic-Tac-Toe</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Tic-Tac-Toe</h1>
-
+  <h1>Online Tic-Tac-Toe</h1>
   <div class="game-container">
     <canvas id="grid" width="300" height="300"></canvas>
     <canvas id="win-line" width="300" height="300"></canvas>
-
     <div id="cell-container">
       <div class="cell" data-index="0"></div>
       <div class="cell" data-index="1"></div>
@@ -25,10 +23,10 @@
       <div class="cell" data-index="8"></div>
     </div>
   </div>
+  <p id="status">Connecting...</p>
+  <button onclick="resetGame()">Reset Game</button>
 
-  <p id="status">Player X's turn</p>
-  <button onclick="resetGame()">Reset</button>
-
+  <script src="/socket.io/socket.io.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
